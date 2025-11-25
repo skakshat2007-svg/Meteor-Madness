@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Energy Calculator</title>
+    <link rel="stylesheet" href="nasa.css">
+</head>
+<body>
+    <div class="container">
+        <h1>☄️ Impact Energy Calculator</h1>
+        
+        <div class="assumptions">
+            <h2>Base Assumptions (Hardcoded Data)</h2>
+            <p><strong>Density:</strong> 3000 kg/m³ (Typical Asteroid)</p>
+            <p><strong>Impact Velocity:</strong> 20 km/s (20,000 m/s)</p>
+        </div>
+
+        <div class="input-panel">
+            <label for="diameter-slider">Asteroid Diameter: 
+                <span id="diameter-value">50</span> meters
+            </label>
+            <input type="range" id="diameter-slider" min="10" max="1000" value="50" step="10">
+        </div>
+        
+        <div class="results-panel">
+            <h2>Impact Results</h2>
+            <div class="result-box">
+                <p>Calculated Mass:</p>
+                <p id="mass-result">...</p>
+            </div>
+            <div class="result-box energy">
+                <p>Kinetic Energy (TNT Equivalent):</p>
+                <p id="energy-result" class="large-text">...</p>
+            </div>
+            <div class="result-box">
+                <p>Estimated Crater Diameter (Simple Model):</p>
+                <p id="crater-result">...</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="nasa.js"></script>
+</body>
+</html>
